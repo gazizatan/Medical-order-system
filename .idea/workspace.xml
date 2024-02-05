@@ -29,6 +29,13 @@
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "/Users/gazizatanirbergen/IdeaProjects/Patient order system/src/main/java/org/example/Main.java"
+  },
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
+    ]
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -47,7 +54,20 @@
       <option name="presentableId" value="Default" />
       <updated>1707108185445</updated>
     </task>
+    <task id="LOCAL-00001" summary="project">
+      <option name="closed" value="true" />
+      <created>1707109413911</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707109413911</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="project" />
+    <option name="LAST_COMMIT_MESSAGE" value="project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
