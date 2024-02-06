@@ -1,5 +1,4 @@
 package org.example;
-import models.Person;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -8,7 +7,7 @@ import java.util.ArrayList;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        String connectionString = "jdbc:postgresql://localhost:5433/simpledb";
+        String connectionString = "jdbc:postgresql://localhost:5433/Medical system";
         ArrayList<Person> users = new ArrayList<>();
         Connection con = null;
         try {
