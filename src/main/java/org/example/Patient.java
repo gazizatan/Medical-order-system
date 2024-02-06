@@ -78,15 +78,6 @@ public class Patient extends Person implements Payable{
         }
         return 0;
     }
-
-    @Override
-    public double transaction() {
-        if(isInsurance == True){
-
-        }
-        return 0;
-    }
-
     @Override
     public String toString() {
         return super.toString() +"Patient{" +
