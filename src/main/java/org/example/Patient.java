@@ -1,5 +1,5 @@
 package org.example;
-public class Patient extends Person{
+public class Patient extends Person implements Payable{
     private int id;
     private static int id_gen=1;
     private String diagnosis;
@@ -23,6 +23,7 @@ public class Patient extends Person{
     }
 
     public void setDiagnosis(String diagnosis) {
+
         this.diagnosis = diagnosis;
     }
 
@@ -71,8 +72,24 @@ public class Patient extends Person{
     }
 
     @Override
+    public double getPaymentAmount() {
+        if(isInsurance == false){
+            return 20000;
+        }
+        return 0;
+    }
+
+    @Override
+    public double transaction() {
+        if(isInsurance == True){
+
+        }
+        return 0;
+    }
+
+    @Override
     public String toString() {
-        return "Patient{" +
+        return super.toString() +"Patient{" +
                 "id=" + id +
                 ", diagnosis='" + diagnosis + '\'' +
                 ", isOnReecord=" + isOnReecord +
