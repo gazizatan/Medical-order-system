@@ -9,10 +9,11 @@ public class Person {
     public Person(){
         id=id_gen++;
     }
-    public Person(String name, String surname, int age){
+    public Person(String name, String surname, int age, boolean gender){
         this();
         setName(name);
         setSurname(surname);
+        setGender(gender);
     }
     public void setName(String name){
 
