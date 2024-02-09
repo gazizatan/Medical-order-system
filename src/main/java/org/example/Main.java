@@ -3,18 +3,16 @@ package org.example;
 import java.sql.*;
 import java.util.ArrayList;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        String connectionString = "jdbc:postgresql://localhost:5433/Medical system";
+        String connectionString = "jdbc:postgresql://localhost:5432/";
         ArrayList<Person> users = new ArrayList<>();
         Connection con = null;
         try {
             Class.forName("org.postgresql.Driver");
             con = DriverManager.getConnection(connectionString, "postgres", "0000");
 
-            String sql = "SELECT id, name, surname, gender FROM users ORDER BY id;";
+            String sql = "SELECT id, name, surname, gender FROM person ORDER BY id;";
             Statement stmt = con.createStatement();
 
             ResultSet rs = stmt.executeQuery(sql);
@@ -25,7 +23,7 @@ public class Main {
                 String surname = rs.getString("surname");
                 boolean gender = rs.getBoolean("gender");
 
-                Person user = new Person(id, name, surname, gender);
+                Person user = new Person();
                 users.add(user);
             }
         } catch (SQLException e) {
