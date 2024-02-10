@@ -12,7 +12,7 @@ public class Main {
             Class.forName("org.postgresql.Driver");
             con = DriverManager.getConnection(connectionString, "postgres", "0000");
 
-            String sql = "SELECT id, name, surname, gender, age FROM person ORDER BY id;";
+            String sql = "SELECT id, name, surname, age, gender FROM person ORDER BY id ASC;";
             Statement stmt = con.createStatement();
 
             ResultSet rs = stmt.executeQuery(sql);
