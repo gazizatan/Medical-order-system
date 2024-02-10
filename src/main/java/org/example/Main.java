@@ -5,14 +5,14 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        String connectionString = "jdbc:postgresql://localhost:5432/";
+        String connectionString = "jdbc:postgresql://localhost:5432/medicalsystem";
         ArrayList<Person> users = new ArrayList<>();
         Connection con = null;
         try {
             Class.forName("org.postgresql.Driver");
             con = DriverManager.getConnection(connectionString, "postgres", "0000");
 
-            String sql = "SELECT id, name, surname, gender FROM person ORDER BY id;";
+            String sql = "SELECT id, name, surname, gender, age FROM person ORDER BY id;";
             Statement stmt = con.createStatement();
 
             ResultSet rs = stmt.executeQuery(sql);
@@ -21,10 +21,11 @@ public class Main {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
                 String surname = rs.getString("surname");
-                boolean gender = rs.getBoolean("gender");
+                String gender = rs.getString("gender");
+                int age = rs.getInt("age");
 
-                Person user = new Person();
-                users.add(user);
+                Person person = new Person();
+                users.add(person);
             }
         } catch (SQLException e) {
             System.out.println("connection error: " + e.getMessage());
@@ -40,8 +41,8 @@ public class Main {
             }
         }
 
-        for (Person user : users) {
-            System.out.println(user);
+        for (Person person : users.toArray(new Person[0])) {
+            System.out.println(person);
         }
     }
 
