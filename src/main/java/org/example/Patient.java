@@ -1,4 +1,5 @@
 package org.example;
+
 public class Patient extends Person implements Payable{
     private int id;
     private static int id_gen=1;
