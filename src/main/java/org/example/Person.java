@@ -1,28 +1,31 @@
 package org.example;
+
 public class Person {
     private int id;
-    private static int id_gen=1;
     private String name;
     private String surname;
     private int age;
     private boolean gender;
-    public Person(){
-        id=id_gen++;
-    }
-    public Person(String name, String surname, int age, boolean gender){
-        this();
+
+    public Person(int id, String name, String surname, int age, boolean gender){
+        set Id(id);
         setName(name);
         setSurname(surname);
         setGender(gender);
     }
-    public void setName(String name){
 
+    public void setId(int id) {
+        this.id = id;
+    }
+    
+    public void setName(String name){
         this.name = name;
     }
+    
     public void setSurname(String surname){
-
         this.surname = surname;
     }
+    
     public void setAge(int age){
         this.age = age;
     }
@@ -31,12 +34,16 @@ public class Person {
         this.gender = gender;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public String getName(){
 
         return surname;
     }
+    
     public String getSurname(){
-
         return surname;
     }
 
@@ -49,7 +56,6 @@ public class Person {
     }
 
     public int getId(){
-
         return id;
     }
 
