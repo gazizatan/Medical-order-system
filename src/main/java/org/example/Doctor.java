@@ -1,10 +1,7 @@
 package org.example;
 
-
-
 public class Doctor extends Person implements Payable {
     private int id;
-    private static int id_gen = 1;
     private String specialization;
     private int roomNumber;
     private boolean isAvailable;
@@ -14,14 +11,19 @@ public class Doctor extends Person implements Payable {
         id = id_gen++;
     }
 
-     public Doctor(String name, String surname, int age, boolean gender, String specialization, int roomNumber, boolean isAvailable, double salary) {
+     public Doctor(int id, String name, String surname, int age, boolean gender, String specialization, int roomNumber, boolean isAvailable, double salary) {
         super(name, surname, age, gender);
+        setId(id);
         setSpecialization(specialization);
         setRoomNumber(roomNumber);
         setAvailable(isAvailable);
         setSalary(salary);
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     public void setSpecialization(String specialization) {
         this.specialization = specialization;
     }
@@ -36,6 +38,10 @@ public class Doctor extends Person implements Payable {
 
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getSpecialization() {
