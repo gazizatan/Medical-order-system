@@ -9,8 +9,9 @@ public class Patient extends Person implements Payable{
     private String chronicDiseases;
     private boolean isInsurance;
 
-    public Patient(String name, String surname, int age, boolean gender, String diagnosis, boolean isOnReecord, boolean isVaccinated, String chronicDiseases, String bloodType){
+    public Patient(int id, String name, String surname, int age, boolean gender, String diagnosis, boolean isOnReecord, boolean isVaccinated, String chronicDiseases, String bloodType){
         super(name, surname, age, gender);
+        setId(id);
         setBloodType(bloodType);
         setChronicDiseases(chronicDiseases);
         setDiagnosis(diagnosis);
@@ -19,6 +20,10 @@ public class Patient extends Person implements Payable{
         setVaccinated(isVaccinated);
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     public void setDiagnosis(String diagnosis) {
 
         this.diagnosis = diagnosis;
