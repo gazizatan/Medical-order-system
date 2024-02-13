@@ -2,7 +2,6 @@ package org.example;
 
 public class Patient extends Person implements Payable{
     private int id;
-    private static int id_gen=1;
     private String diagnosis;
     private boolean isOnReecord;
     private String bloodType;
@@ -10,9 +9,6 @@ public class Patient extends Person implements Payable{
     private String chronicDiseases;
     private boolean isInsurance;
 
-    public Patient(){
-        id = id_gen++;
-    }
     public Patient(String name, String surname, int age, boolean gender, String diagnosis, boolean isOnReecord, boolean isVaccinated, String chronicDiseases, String bloodType){
         super(name, surname, age, gender);
         setBloodType(bloodType);
@@ -46,6 +42,10 @@ public class Patient extends Person implements Payable{
 
     public void setOnReecord(boolean onReecord) {
         isOnReecord = onReecord;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getBloodType() {
