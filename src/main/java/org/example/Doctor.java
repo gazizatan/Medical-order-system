@@ -1,5 +1,15 @@
 package org.example;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+
 public class Doctor extends Person implements Payable {
     private int id;
     private String specialization;
@@ -7,9 +17,7 @@ public class Doctor extends Person implements Payable {
     private boolean isAvailable;
     private double salary;
 
-    public Doctor() {
-        id = id_gen++;
-    }
+
 
      public Doctor(int id, String name, String surname, int age, boolean gender, String specialization, int roomNumber, boolean isAvailable, double salary) {
         super(name, surname, age, gender);

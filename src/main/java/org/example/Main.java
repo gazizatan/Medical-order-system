@@ -12,7 +12,7 @@ public class Main {
             Class.forName("org.postgresql.Driver");
             con = DriverManager.getConnection(connectionString, "postgres", "0000");
 
-            String sql = "SELECT id, name, surname, age, gender FROM person ORDER BY id ASC;";
+            String sql = "SELECT id, name, surname, gender FROM users ORDER BY id;";
             Statement stmt = con.createStatement();
 
             ResultSet rs = stmt.executeQuery(sql);
@@ -21,10 +21,9 @@ public class Main {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
                 String surname = rs.getString("surname");
-                String gender = rs.getString("gender");
-                int age = rs.getInt("age");
+                boolean gender = rs.getBoolean("gender");
 
-                Person person = new Person();
+                Person person = new Person(id, name, surname, gender);
                 users.add(person);
             }
         } catch (SQLException e) {
@@ -41,7 +40,7 @@ public class Main {
             }
         }
 
-        for (Person person : users.toArray(new Person[0])) {
+        for (Person person : users) {
             System.out.println(person);
         }
     }
