@@ -1,5 +1,5 @@
 package org.example;
 
 public interface Referralable {
-    void getReferral();
+    void getReferral(String diagnosis);
 }

@@ -12,7 +12,7 @@ import java.util.HashMap;
 @Getter
 @Setter
 
-public class Patient extends Person implements Payable, Referralable {
+public class Patient extends Person implements Payable,Referralable {
     private int id;
     private String diagnosis;
     private boolean isOnReecord;
