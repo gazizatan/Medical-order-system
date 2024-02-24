@@ -21,9 +21,12 @@ public class Main {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
                 String surname = rs.getString("surname");
-                boolean gender = rs.getBoolean("gender");
+                String gender = rs.getString("gender");
+                Integer age = rs.getInt("age");
+                String role = rs.getString("role");
 
-                Person person = new Person(id, name, surname, gender);
+
+                Person person = new Person(id, name, surname, gender, age, role);
                 users.add(person);
             }
         } catch (SQLException e) {

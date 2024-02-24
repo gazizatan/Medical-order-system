@@ -14,11 +14,13 @@ public class Person {
     private int id;
     private String name;
     private String surname;
-    private boolean gender;
+    private String gender;
+    private int age;
+    private String role;
 
     @Override
     public String toString() {
-        return id + ": " + name + " " + surname + " - " + (gender ? "male" : "female");
+        return id + ": " + name + " " + surname + " - " + gender + ", " + role + ", " + age;
     }
 }
 
