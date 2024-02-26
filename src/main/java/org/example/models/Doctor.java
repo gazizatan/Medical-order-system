@@ -1,9 +1,11 @@
-package org.example;
+package org.example.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.example.Payable;
+import org.example.Person;
 
 @AllArgsConstructor
 @NoArgsConstructor

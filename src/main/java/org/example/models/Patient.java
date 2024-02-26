@@ -1,9 +1,12 @@
-package org.example;
+package org.example.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.example.Payable;
+import org.example.Person;
+import org.example.Referralable;
 
 import java.util.HashMap;
 
@@ -12,7 +15,7 @@ import java.util.HashMap;
 @Getter
 @Setter
 
-public class Patient extends Person implements Payable,Referralable {
+public class Patient extends Person implements Payable, Referralable {
     private int id;
     private String diagnosis;
     private boolean isOnReecord;

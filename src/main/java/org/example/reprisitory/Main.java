@@ -1,4 +1,6 @@
-package org.example;
+package org.example.reprisitory;
+
+import org.example.Person;
 
 import java.sql.*;
 import java.util.ArrayList;
