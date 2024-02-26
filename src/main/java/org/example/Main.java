@@ -1,4 +1,4 @@
-package org.example.reprisitory;
+package org.example;
 
 import org.example.Person;
 
